@@ -1,14 +1,13 @@
-
 import React, { useRef, useEffect, memo } from "react";
 import { type, type as loopedType } from "@camwiegert/typical";
 
-import styles from './styles.css'
+import styles from './styles.module.css'
 
 const Typical = ({ steps, loop, className, wrapper = "p" }) => {
   const typicalRef = useRef(null);
   const Component = wrapper;
   const classNames = [styles.typicalWrapper];
-  
+
   if (className) {
     classNames.unshift(className);
   }
